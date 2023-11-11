@@ -21,7 +21,7 @@
                 </div>
                 <div class="card border-0 shadow-sm rounded">
                     <div class="card-body">
-                        <a href="" class="btn btn-md btn-success mb-3">TAMBAH PRODUK</a>
+                        <a href="{{ route('produks.create') }}" class="btn btn-md btn-success mb-3">TAMBAH PRODUK</a>
                         <table class="table table-bordered">
                             <thead>
                               <tr>
@@ -38,17 +38,17 @@
                             <tbody>
                               @forelse ($produks as $produk)
                                 <tr>
-                                    <td></td>
+                                    <td class="text-center">{{ $loop->iteration }}</td>
                                     <td>{{ $produk->kode_produk }}</td>
                                     <td>{{ $produk->nama }}</td>
                                     <td>{{ $produk->varian }}</td>
                                     <td>{{ $produk->ukuran }}</td>
                                     <td>{{ $produk->stok }}</td>
                                     <td class="text-center">
-                                        <img src="{{ asset('/storage/posts/'.$post->image) }}" class="rounded" style="width: 150px">
+                                        <img src="{{ asset('/storage/produks/'.$produk->image) }}" class="rounded" style="width: 150px">
                                     </td>
                                     <td class="text-center">
-                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('posts.destroy', $post->id) }}" method="POST">
+                                        <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('produks.destroy', $produk->id) }}" method="POST">
                                             <a href="" class="btn btn-sm btn-dark">SHOW</a>
                                             <a href="" class="btn btn-sm btn-primary">EDIT</a>
                                             @csrf
