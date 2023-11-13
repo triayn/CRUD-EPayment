@@ -31,6 +31,7 @@ class ProdukController extends Controller
             'varian'      => 'required|min:5',
             'ukuran'      => 'required|min:3',
             'stok'        => 'required|regex:/^[0-9]+$/',
+            'harga'       => 'required|regex:/^[0-9]+$/',
             'image'       => 'required|image|mimes:jpeg,jpg,png|max:2048'
         ]);
 
@@ -43,6 +44,7 @@ class ProdukController extends Controller
             'varian'      => $request->varian,
             'ukuran'      => $request->ukuran,
             'stok'        => $request->stok,
+            'harga'       => $request->harga,
             'image'       => $image->hashName()
         ]);
 
@@ -71,6 +73,7 @@ class ProdukController extends Controller
             'varian'      => 'required|min:5',
             'ukuran'      => 'required|min:3',
             'stok'        => 'required|regex:/^[0-9]+$/',
+            'harga'       => 'required|regex:/^[0-9]+$/',
             'image'       => 'required|image|mimes:jpeg,jpg,png|max:2048'
         ]);
 
@@ -88,6 +91,7 @@ class ProdukController extends Controller
                 'varian'      => $request->varian,
                 'ukuran'      => $request->ukuran,
                 'stok'        => $request->stok,
+                'harga'       => $request->harga,
                 'image'       => $image->hashName()
             ]);
         } else {
@@ -97,6 +101,7 @@ class ProdukController extends Controller
                 'varian'      => $request->varian,
                 'ukuran'      => $request->ukuran,
                 'stok'        => $request->stok,
+                'harga'       => $request->harga,
             ]);
         }
         

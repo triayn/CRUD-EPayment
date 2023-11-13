@@ -79,6 +79,18 @@
                             </div>
 
                             <div class="form-group">
+                                <label class="font-weight-bold">Harga</label>
+                                <input type="text" class="form-control @error('harga') is-invalid @enderror" name="harga" value="{{ old('harga', $produk->harga) }}" placeholder="Masukkan harga Produk">
+                            
+                                <!-- error message untuk title -->
+                                @error('harga')
+                                    <div class="alert alert-danger mt-2">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
                                 <label class="font-weight-bold">GAMBAR</label>
                                 <input type="file" class="form-control @error('image') is-invalid @enderror" name="image">
                             </div>

@@ -29,6 +29,9 @@
                         <p class="tmt-3">
                             {!! $produk->stok !!}
                         </p>
+                        <p class="tmt-3">
+                            {!! $produk->harga !!}
+                        </p>
                     </div>
                 </div>
             </div>

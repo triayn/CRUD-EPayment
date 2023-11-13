@@ -15,6 +15,7 @@ class Produk extends Model
         'varian',
         'ukuran',
         'stok',
+        'harga',
         'image',
     ];
 }

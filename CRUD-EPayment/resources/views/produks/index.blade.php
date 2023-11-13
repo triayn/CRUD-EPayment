@@ -31,6 +31,7 @@
                                 <th scope="col">Vatian</th>
                                 <th scope="col">Ukuran</th>
                                 <th scope="col">Stok</th>
+                                <th scope="col">Harga</th>
                                 <th scope="col">Image</th>
                                 <th scope="col">Aksi</th>
                               </tr>
@@ -44,6 +45,7 @@
                                     <td>{{ $produk->varian }}</td>
                                     <td>{{ $produk->ukuran }}</td>
                                     <td>{{ $produk->stok }}</td>
+                                    <td>{{ $produk->harga }}</td>
                                     <td class="text-center">
                                         <img src="{{ asset('/storage/produks/'.$produk->image) }}" class="rounded" style="width: 150px">
                                     </td>
