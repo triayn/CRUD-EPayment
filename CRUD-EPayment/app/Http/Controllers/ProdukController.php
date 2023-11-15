@@ -105,7 +105,7 @@ class ProdukController extends Controller
             ]);
         }
         
-        return redirect()->route('produks.index')->with(['success' => "Data Berhasil DIedit"]);
+        return redirect()->route('produks.index')->with(['success' => "Data Berhasil Diedit"]);
     }
 
     public function destroy($id): RedirectResponse

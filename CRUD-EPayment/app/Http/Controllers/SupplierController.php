@@ -50,17 +50,21 @@ class SupplierController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $id): View
     {
-        //
+        $supplier = Supplier::findOrFail($id);
+
+        return view('suppliers.show', compact('supplier'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id): View
     {
-        //
+        $supplier = Supplier::findOrFail($id);
+
+        return view('suppliers.edit', compact('supplier'));
     }
 
     /**
@@ -68,7 +72,21 @@ class SupplierController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $this->validate($request, [
+            'nama'       => 'required|min:1',
+            'phone'      => 'required|min:11|max:15',
+            'almat'      => 'required|min:5'
+        ]);
+
+        $supplier = Supplier::findOrFail($id);
+
+        $supplier->update([
+            'nama'      => $request->nama,
+            'phone'     => $request->phone,
+            'alamat'    => $request->alamat
+        ]);
+
+        return redirect()->route('suppliers.index')->with(['success' => 'Data Berhasil Ditambahkan']);
     }
 
     /**
