@@ -68,4 +68,13 @@ class UserController extends Controller
 
             return redirect()->route('karyawan.index')->with(['success' => 'Data Berhasil Diedit']);
     }
+
+    public function destroy($id): RedirectResponse
+    {
+        $users = User::findOrFail($id);
+
+        $users->delete();
+
+        return redirect()->route('karyawan.index')->with(['success' => 'Data Berhasil Dihapus']);
+    }
 }

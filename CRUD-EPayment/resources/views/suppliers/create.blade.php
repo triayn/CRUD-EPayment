@@ -20,7 +20,7 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Nama</label>
-                                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="" placeholder="Masukkan Nama Supplier">
+                                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="" placeholder="Masukkan nama SUpplier ">
                             
                                 <!-- error message untuk title -->
                                 @error('nama')
@@ -29,7 +29,7 @@
                                     </div>
                                 @enderror
                             </div>
-                            
+
                             <div class="form-group">
                                 <label class="font-weight-bold">No Handphone</label>
                                 <input type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="" placeholder="+62">
