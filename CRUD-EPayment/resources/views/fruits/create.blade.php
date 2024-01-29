@@ -31,7 +31,8 @@
 
                             <div class="form-group">
                                 <label class="font-weight-bold">Nama Buah</label>
-                                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" value="" placeholder="Masukkan Nama Buah">
+                                <input type="text" class="form-control @error('nama') is-invalid @enderror" name="nama" 
+                                value="" placeholder="Masukkan Nama Buah">
                             
                                 <!-- error message untuk title -->
                                 @error('nama')
